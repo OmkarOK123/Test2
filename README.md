@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Recursion Programs in C</title>
-  <style>
+
     body {
       font-family: monospace;
       background-color: #f9f9f9;
