@@ -1,25 +1,4 @@
 
-    body {
-      font-family: monospace;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 20px;
-    }
-    h2 {
-      color: #0074D9;
-    }
-    pre {
-      background-color: #f4f4f4;
-      border-left: 4px solid #0074D9;
-      padding: 10px;
-      overflow-x: auto;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
-<body>
   <h1>Recursion Programs in C</h1>
 
   <div class="section">
