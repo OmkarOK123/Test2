@@ -1,142 +1,40 @@
+<h3>🔢 C Program: Print All Negative Elements in an Array</h3>
+<pre style="background-color: #f4f4f4; padding: 12px; border: 1px solid #ccc; border-radius: 5px; overflow: auto; font-family: Consolas, monospace; color: #333;">
+<span style="color: green;">// Program to print all negative elements in an array</span>
+<span style="color: blue;">#include</span> &lt;stdio.h&gt;
 
-  <h1>Recursion Programs in C</h1>
+<span style="color: blue;">int</span> main() { <span style="color: blue;">int</span> arr\[100], n, i;
 
-  <div class="section">
-    <h2>🔸 1. Print Natural Numbers from 1 to n</h2>
-    <pre><code>#include &lt;stdio.h&gt;
+```
+printf(<span style="color: brown;">"Enter number of elements: "</span>);
+scanf(<span style="color: brown;">"%d"</span>, &amp;n);
 
-void printNatural(int n) {
-    if (n == 0)
-        return;
-    printNatural(n - 1);  // recursive call
-    printf("%d ", n);     // printing in increasing order
+printf(<span style="color: brown;">"Enter %d elements: "</span>, n);
+<span style="color: blue;">for</span> (i = 0; i &lt; n; i++)
+    scanf(<span style="color: brown;">"%d"</span>, &amp;arr[i]);
+
+printf(<span style="color: brown;">"Negative elements in array are:\n"</span>);
+<span style="color: blue;">for</span> (i = 0; i &lt; n; i++) {
+    <span style="color: blue;">if</span> (arr[i] &lt; 0)
+        printf(<span style="color: brown;">"%d "</span>, arr[i]);
 }
 
-int main() {
-    int n;
-    printf("Enter value of n: ");
-    scanf("%d", &n);
-    printNatural(n);
-    return 0;
-}</code></pre>
-  </div>
+<span style="color: blue;">return</span> 0;
+```
 
-  <div class="section">
-    <h2>🔸 2. Sum of Natural Numbers in Range (1 to n)</h2>
-    <pre><code>#include &lt;stdio.h&gt;
+} </pre>
 
-int sumNatural(int n) {
-    if (n == 0)
-        return 0;
-    else
-        return n + sumNatural(n - 1);
-}
+<p><strong>Explanation:</strong></p>
+<ul>
+  <li>User inputs the size of the array and its elements.</li>
+  <li>The program iterates through each element and checks if it is negative.</li>
+  <li>If a value is negative (<code>&lt; 0</code>), it is printed.</li>
+</ul>
 
-int main() {
-    int n;
-    printf("Enter number: ");
-    scanf("%d", &n);
-    printf("Sum = %d\n", sumNatural(n));
-    return 0;
-}</code></pre>
-  </div>
+<p><strong>Sample Output:</strong></p>
+<pre style="background-color: #f9f9f9; padding: 10px; border: 1px dashed #ccc; font-family: Consolas, monospace;">
+Enter number of elements: 6
+Enter 6 elements: 5 -3 8 -2 0 -7
+Negative elements in array are:
+-3 -2 -7</pre>
 
-  <div class="section">
-    <h2>🔸 3. Print All Even Numbers in Given Range</h2>
-    <pre><code>#include &lt;stdio.h&gt;
-
-void printEven(int start, int end) {
-    if (start > end)
-        return;
-    if (start % 2 == 0)
-        printf("%d ", start);
-    printEven(start + 1, end);
-}
-
-int main() {
-    int a, b;
-    printf("Enter range: ");
-    scanf("%d %d", &a, &b);
-    printEven(a, b);
-    return 0;
-}</code></pre>
-  </div>
-
-  <div class="section">
-    <h2>🔸 4. Sum of Even and Odd Numbers in a Range</h2>
-    <pre><code>#include &lt;stdio.h&gt;
-
-int sumEven(int start, int end) {
-    if (start > end)
-        return 0;
-    if (start % 2 == 0)
-        return start + sumEven(start + 1, end);
-    else
-        return sumEven(start + 1, end);
-}
-
-int sumOdd(int start, int end) {
-    if (start > end)
-        return 0;
-    if (start % 2 != 0)
-        return start + sumOdd(start + 1, end);
-    else
-        return sumOdd(start + 1, end);
-}
-
-int main() {
-    int start, end;
-    printf("Enter start and end: ");
-    scanf("%d %d", &start, &end);
-    printf("Sum of even numbers = %d\n", sumEven(start, end));
-    printf("Sum of odd numbers = %d\n", sumOdd(start, end));
-    return 0;
-}</code></pre>
-  </div>
-
-  <div class="section">
-    <h2>🔸 5. Factorial Using Recursion</h2>
-    <pre><code>#include &lt;stdio.h&gt;
-
-long long factorial(int n) {
-    if (n == 0 || n == 1)
-        return 1;
-    else
-        return n * factorial(n - 1);
-}
-
-int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    printf("Factorial of %d is %lld\n", num, factorial(num));
-    return 0;
-}</code></pre>
-  </div>
-
-  <div class="section">
-    <h2>🔸 6. Fibonacci Series Using Recursion</h2>
-    <pre><code>#include &lt;stdio.h&gt;
-
-int fibonacci(int n) {
-    if (n == 0)
-        return 0;
-    else if (n == 1)
-        return 1;
-    else
-        return fibonacci(n - 1) + fibonacci(n - 2);
-}
-
-int main() {
-    int terms;
-    printf("Enter number of terms: ");
-    scanf("%d", &terms);
-    for (int i = 0; i &lt; terms; i++) {
-        printf("%d ", fibonacci(i));
-    }
-    return 0;
-}</code></pre>
-  </div>
-
-</body>
-</html>
