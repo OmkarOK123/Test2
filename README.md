@@ -2,7 +2,68 @@
 
 ### 🟢 Basic (Concepts & Fundamentals)
 
+---
 1. What are the different basic data types available in C?
+In C, data types define the type of data a variable can hold. Understanding them is fundamental because it helps the compiler allocate the correct amount of memory and perform operations correctly. The **basic data types** in C are:
+
+1. **Integer Types (`int`)**
+
+   * Used to store whole numbers without decimal points.
+   * Example: `int a = 10;`
+   * **Variants:**
+
+     * `short int` or `short` → Smaller range, usually 2 bytes.
+     * `long int` or `long` → Larger range, usually 4 or 8 bytes depending on system.
+     * `long long int` → Even larger range, usually 8 bytes.
+   * **Signed vs Unsigned:**
+
+     * `signed int` → Can store negative and positive numbers.
+     * `unsigned int` → Only positive numbers, doubles the maximum positive value.
+
+2. **Floating-Point Types (`float`, `double`)**
+
+   * Used to store numbers with decimal points.
+   * Example: `float temperature = 36.6;`
+   * **`float`** → Single precision, usually 4 bytes.
+   * **`double`** → Double precision, usually 8 bytes, more accurate.
+   * **`long double`** → Extended precision, depends on the system.
+
+3. **Character Type (`char`)**
+
+   * Stores a single character.
+   * Example: `char grade = 'A';`
+   * Usually 1 byte.
+   * Can be **signed** or **unsigned** depending on implementation.
+   * Characters are stored as ASCII values internally.
+
+4. **Void Type (`void`)**
+
+   * Represents no value.
+   * Commonly used in functions that do not return a value:
+
+     ```c
+     void printMessage() {
+         printf("Hello\n");
+     }
+     ```
+
+**Summary Table:**
+
+| Data Type | Size (approx.) | Example              | Notes                 |
+| --------- | -------------- | -------------------- | --------------------- |
+| `int`     | 2–4 bytes      | `int x = 10;`        | Whole numbers         |
+| `float`   | 4 bytes        | `float f = 3.14;`    | Decimal numbers       |
+| `double`  | 8 bytes        | `double d = 3.1415;` | More precise decimals |
+| `char`    | 1 byte         | `char c = 'A';`      | Single character      |
+| `void`    | 0 bytes        | `void func();`       | No data               |
+
+**Extra Note for Interviews:**
+
+* Mention that C is a **statically typed language**, so the type must be declared before using a variable.
+* Variants like `signed`, `unsigned`, `short`, and `long` help optimize memory based on application requirements.
+
+---
+
 2. What is the difference between **signed** and **unsigned** data types?
 3. What is the size of `int`, `char`, `float`, and `double` in C on a **32-bit** and **64-bit** system?
 4. What is the difference between `float` and `double`?
