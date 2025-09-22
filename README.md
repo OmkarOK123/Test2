@@ -4,6 +4,7 @@
 
 ---
 1. What are the different basic data types available in C?
+
 In C, data types define the type of data a variable can hold. Understanding them is fundamental because it helps the compiler allocate the correct amount of memory and perform operations correctly. The **basic data types** in C are:
 
 1. **Integer Types (`int`)**
